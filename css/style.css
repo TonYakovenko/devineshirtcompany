@@ -1,0 +1,566 @@
+/* 
+    COLORS:
+    font-gray: #777;
+*/
+
+:root {
+  --lite-green: #ddffcc;
+  --lite-red: #ffd4cc;
+  --success-color: #04aa6d;
+  --error-color: #e74c3c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #777;
+}
+
+p {
+  color: #9b9b9b;
+}
+
+/*------------------ TOP NAV -----------------*/
+
+/* Add a background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.main-nav {
+  padding-top: 14px;
+  float: right;
+}
+
+.topnav li {
+  display: inline-block;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #444;
+  transition: background 0.3s;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+/* Hide the button that should open and close the topnav on small screens */
+.mob-nav-icon {
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+.mob-nav-icon i {
+  font-size: 130%;
+}
+
+/*---------------HEADER---------------*/
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(3, 3, 3, 0.8),
+      rgba(1, 1, 1, 0.8)
+    ),
+    url(../img/header.jpg);
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* .logo-box {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+} */
+
+.logo {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 40px;
+  float: left;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-logo {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-logo .logo{
+  height: 300px;
+}
+
+.heading {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emerge-anim {
+    animation: emerge 0.75s ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .slide-from-left-anim {
+    animation: slide-from-left 0.75s ease-out;
+  }
+}
+
+.heading2 {
+  position: relative;
+  padding: 15px 0 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #c5c5c5;
+}
+
+.heading3 {
+  padding: 10px 0 8px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #a8a8a8;
+}
+
+/*---------------ABOUT---------------*/
+
+.about {
+  background-image: url("/img/drawing.svg");
+  background-repeat: no-repeat;
+  background-position: 70px 0px;
+  background-size: 80pt;
+  background-color: #222;
+}
+
+/*---------------SERVICES---------------*/
+.serv-box {
+  background-color: #535353;
+  border-radius: 3px;
+  padding: 1rem;
+  height: 75vh;
+  margin: 10px;
+}
+
+.services {
+  /* height: 95vh; */
+  background-color: #444444;
+}
+/*---------------SCREEN PRINTING---------------*/
+
+.screen_printing {
+  height: 95vh;
+  background-color: #1a1a1a;
+}
+
+/*-------------------FAQ--------------------*/
+.faq {
+  background-color: #222;
+}
+
+.accordions {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.accordions h3 {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.accordion-item {
+  background-color: #333;
+  border-radius: 5px;
+  color: #9b9b9b;
+  margin-bottom: 10px;
+  border: 1px solid #1a1a1a;
+}
+
+.accordion-item .accordion-title {
+  cursor: pointer;
+  padding: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.accordion-item .accordion-title.active-title {
+  background-color: #04aa6d;
+  color: #fff;
+}
+
+.accordion-item .accordion-title h3 {
+  font-weight: 700;
+  margin: 0;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+}
+
+.accordion-item .accordion-title i.fa-chevron-down {
+  transform: rotate(0);
+  transition: 0.4s;
+}
+
+.accordion-item .accordion-title i.fa-chevron-down.chevron-top {
+  transform: rotate(-180deg);
+  color: #fff;
+}
+
+.accordion-item .accordion-content {
+  display: none;
+  line-height: 1.7;
+  color: #1a1a1a;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 0 0 5px 5px;
+}
+
+.accordion-item .accordion-content.active {
+  display: block;
+}
+
+.accordion-item .accordion-content p {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #777;
+}
+
+.details {
+  background: #dce1f2;
+}
+
+.details .detailed_info {
+  margin: 50px auto;
+}
+
+.details img {
+  margin: 0 auto;
+  display: block;
+}
+
+.details h3 {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.details p {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.details ul li {
+  font-size: 16px;
+  line-height: 1.7em;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/*---------------ART GUIDELINES ----------------*/
+.art_guidelines {
+  /* height: 95vh; */
+  background-color: #1a1a1a;
+}
+
+/*--------------TESTIMONIALS-----------------*/
+.testimonials{
+  background-color: #535353;
+}
+
+.testimonials .serv-box{
+  background-color: lightgrey;
+  border-radius: 3px;
+}
+
+.testimonials .serv-box i.quote{
+  font-size: 20px;
+  color: #04aa6d;
+}
+
+.testimonials .serv-box .content{
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonials .serv-box .content .name{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.testimonials .serv-box .content .job{
+  font-size: 17px;
+  font-weight: 500;
+  color: #04aa6d;
+}
+
+.testimonials .serv-box .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background:#04aa6d;
+  border-radius: 50%;
+}
+
+.testimonials .serv-box .content .image .avatar{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/*---------------CONTACT US------------------*/
+.center-form {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.contact-us {
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form {
+  padding: 0 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control input,
+.form-control textarea {
+  background-color: lightgrey;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+textarea {
+  height: 12em;
+  width: 50em;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: 0;
+  background-color: #fff;
+  border-color: var(--success-color);
+}
+
+.form-control textarea:focus {
+  outline: 0;
+  background-color: #fff;
+  border-color: var(--success-color);
+}
+
+.form-control.success input,
+.form-control.success textarea {
+  background-color: var(--lite-green);
+}
+
+.form-control.error input,
+.form-control.error textarea {
+  background-color: var(--lite-red);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: var(--success-color);
+  border: 2px solid var(--success-color);
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+
+/*---------------FOOTER ----------------*/
+.footer {
+  background-color: rgb(10, 10, 10);
+  /* padding: 1rem 5rem 0 5rem; */
+}
+
+.logo-footer {
+  display: block;
+  margin: 15px auto 0 auto;
+  height: 80px;
+}
+
+.copyright {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+
+/*-------------------------------MEDIA QUARIES-------------------------------------*/
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+.text-holder {
+  padding: 1rem 18rem;
+}
+
+@media screen and (max-width: 1280px) {
+
+  .text-holder {
+    padding: 1rem 13rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .center-form {
+    width: 80%;
+  }
+
+  .text-holder {
+    padding: 1rem 10rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .center-form {
+    width: 90%;
+  }
+
+  .text-holder {
+    padding: 1rem 6rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .center-form {
+    width: 95%;
+  }
+
+  .mob-nav-icon {
+    display: inline-block;
+  }
+
+  .main-nav {
+    display: none;
+    float: left;
+  }
+
+  .main-nav li {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    text-align: left;
+  }
+
+  .text-holder {
+    padding: 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .center-form {
+    width: 100%;
+  }
+
+  .text-holder {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/*-------------------------------ANIMATIONS-------------------------------------*/
+
+@keyframes emerge {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+    opacity: 0;
+    left: -20px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
